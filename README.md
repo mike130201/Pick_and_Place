@@ -1,5 +1,7 @@
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=AY5m8ooS1Zg"><img src="https://img.youtube.com/vi/AY5m8ooS1Zg/0.jpg" alt="Video de pick and place"></a>
+</p>
 
-![Video de pick and place](Pick_and_Place/Images/Video.mp4)
 # Pick and Place
 
 This project is a pick and place solution based on an industrial robot to automate the assembly process of parts on a production line.
