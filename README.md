@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="Pick_and_Place/Images/Open.png" alt="Imagen Open">
+</p>
+
+<p align="center">
   <a href="https://www.youtube.com/watch?v=AY5m8ooS1Zg"><img src="https://img.youtube.com/vi/AY5m8ooS1Zg/0.jpg" alt="Video de pick and place"></a>
 </p>
 
