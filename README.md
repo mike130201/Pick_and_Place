@@ -1,3 +1,6 @@
+
+![Texto alternativo]Images/WhatsApp Video 2023-05-01 at 11.30.16 AM.mp4
+
 # Pick and Place
 
 This project is a pick and place solution based on an industrial robot to automate the assembly process of parts on a production line.
