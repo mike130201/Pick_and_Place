@@ -160,7 +160,7 @@ void OpenManipulatorTeleop::printText()
   printf("P : Pick and place \n");
   printf("M : Palletizing \n");
   printf("S : Pick and place Inverse\n");
-  printf("L : Palletizing Inverse\n");  
+  printf("L : Depalletizing\n");  
   printf("       \n");
   printf("q to quit\n");
   printf("---------------------------\n");
@@ -338,6 +338,28 @@ void OpenManipulatorTeleop::pick_or_pallet(char sel)
     openManipulatorTeleop.setGoal(ch);
     ch='2';
     openManipulatorTeleop.setGoal(ch);
+    ch='3';
+    openManipulatorTeleop.setGoal(ch);
+    ch='g';
+    openManipulatorTeleop.setGoal(ch);
+    ch='5';
+    openManipulatorTeleop.setGoal(ch);
+    ch='f';
+    openManipulatorTeleop.setGoal(ch);
+    ch='3';
+    openManipulatorTeleop.setGoal(ch);
+    ch='2';
+    openManipulatorTeleop.setGoal(ch);
+    ch='7';
+    openManipulatorTeleop.setGoal(ch);
+    ch='8';
+    openManipulatorTeleop.setGoal(ch);
+    ch='g';
+    openManipulatorTeleop.setGoal(ch);
+    ch='7';
+    openManipulatorTeleop.setGoal(ch);
+    ch='1';
+    openManipulatorTeleop.setGoal(ch);
 
   }
   else if (sel == 'm' || sel == 'M')
@@ -394,6 +416,28 @@ void OpenManipulatorTeleop::pick_or_pallet(char sel)
     ch='1';
     openManipulatorTeleop.setGoal(ch);
     ch='2';
+    openManipulatorTeleop.setGoal(ch);
+    ch='7';
+    openManipulatorTeleop.setGoal(ch);
+    ch='g';
+    openManipulatorTeleop.setGoal(ch);
+    ch='8';
+    openManipulatorTeleop.setGoal(ch);
+    ch='f';
+    openManipulatorTeleop.setGoal(ch);
+    ch='7';
+    openManipulatorTeleop.setGoal(ch);
+    ch='2';
+    openManipulatorTeleop.setGoal(ch);
+    ch='3';
+    openManipulatorTeleop.setGoal(ch);
+    ch='5';
+    openManipulatorTeleop.setGoal(ch);
+    ch='g';
+    openManipulatorTeleop.setGoal(ch);
+    ch='3';
+    openManipulatorTeleop.setGoal(ch);
+    ch='1';
     openManipulatorTeleop.setGoal(ch);
 
   }
