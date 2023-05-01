@@ -1,52 +1,53 @@
 # Pick and Place
 
-Este proyecto es una solución de pick and place basada en un robot industrial para automatizar el proceso de ensamblaje de piezas en una línea de producción.
+This project is a pick and place solution based on an industrial robot to automate the assembly process of parts on a production line.
 
-## Requisitos
+## Requirements
 
-Para ejecutar este proyecto necesitas los siguientes componentes:
+To run this project you need the following components:
 
-- Robot industrial
-- Sensor de visión
-- Controlador de movimiento
-- Software de control de robot
-- Software de control de visión
-- Piezas a ensamblar
+- Industrial robot
+- Vision sensor
+- Motion controller
+- Robot control software
+- Vision control software
+- Parts to be assembled
 
-## Instalación
+## Installation
 
-1. Clona el repositorio en tu ordenador:
-git clone https://github.com/tu_usuario/pick-and-place.git
+1. Clone the repository on your computer:
+git clone https://github.com/your_username/pick-and-place.git
 
-css
+markdown
 Copy code
 
-2. Instala las dependencias del proyecto:
+2. Install the project dependencies:
 pip install -r requirements.txt
 
 markdown
 Copy code
 
-## Uso
+## Usage
 
-1. Conecta todos los componentes del proyecto y asegúrate de que están funcionando correctamente.
-2. Inicia el software de control de robot y carga el programa de control de movimiento `pick_and_place.py`.
-3. Inicia el software de control de visión y carga el programa de detección de piezas `piece_detection.py`.
-4. Ejecuta el programa de control de movimiento para que el robot se posicione en la ubicación adecuada.
-5. Ejecuta el programa de detección de piezas para que el sensor de visión detecte las piezas a ensamblar.
-6. Ejecuta el programa de control de movimiento para que el robot recoja las piezas y las ensamble.
-7. Repite el proceso hasta que todas las piezas hayan sido ensambladas.
+1. Connect all the project components and make sure they are working properly.
+2. Start the robot control software and load the motion control program `pick_and_place.py`.
+3. Start the vision control software and load the piece detection program `piece_detection.py`.
+4. Execute the motion control program to position the robot in the appropriate location.
+5. Execute the piece detection program to have the vision sensor detect the parts to be assembled.
+6. Execute the motion control program to have the robot pick up and assemble the parts.
+7. Repeat the process until all the parts have been assembled.
 
-## Contribución
+## Contribution
 
-Si quieres contribuir a este proyecto, por favor sigue estos pasos:
+If you want to contribute to this project, please follow these steps:
 
-1. Haz un fork de este repositorio.
-2. Crea una nueva rama para tu contribución.
-3. Realiza tus cambios y haz un commit con un mensaje descriptivo.
-4. Haz un push de tus cambios a tu repositorio.
-5. Crea un pull request hacia este repositorio y describe tus cambios.
+1. Fork this repository.
+2. Create a new branch for your contribution.
+3. Make your changes and commit with a descriptive message.
+4. Push your changes to your repository.
+5. Create a pull request to this repository and describe your changes.
 
-## Licencia
+## License
 
-Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE.md para más detalles.
+This project is licensed under the MIT License. See the LICENSE.md file for more details.
+I hope this helps! Good luck with your project.
