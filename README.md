@@ -1,5 +1,5 @@
 
-
+![Video de pick and place](Pick_and_Place/Images/Video.mp4)
 # Pick and Place
 
 This project is a pick and place solution based on an industrial robot to automate the assembly process of parts on a production line.
