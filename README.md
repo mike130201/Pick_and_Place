@@ -73,4 +73,69 @@ parameters.
 1. Number the links: "0" will be called the "ground", or fixed base where the robot is anchored. "1" the first
 first mobile link, etc. 0-1-2-3 Links.
 
+<p align="center">
+  <img src="Images/Paso1.png" alt="Imagen Open">
+</p>
+
 2.Number the joints: "1" will be the first degree of freedom, and "n" the last. 1-4 Articulations
+
+3. Locate the axis of each joint: For pairs of revolution, it will be the axis of rotation. For prismatic, it will be the axis along which the link moves.
+
+<p align="center">
+  <img src="Images/EjeDeCadaArticulacion.png" alt="Imagen Open">
+</p>
+
+4. Z axes: We start placing the XYZ systems. We place the Zi-1 on the axes of the i joints, with i = 1, . . . ., n. That is, Z0 goes on the axis of the 1st joint, Z1 goes on the axis of the 2nd degree of freedom, etc.
+
+<p align="center">
+  <img src="Images/EjesZ.png" alt="Imagen Open">
+</p>
+
+5. Coordinate system 0: The origin point is located at any point along Z0. The orientation of X0 and Y0 can be arbitrary, provided of course that XYZ is a dextrorotating system.
+6. Rest of systems: For the rest of the systems i = 1, . . . ., N - 1, place the origin point at the intersection of Zi with the normal common to Zi and Zi+1. intersection of Zi with the normal common to Zi and Zi+1. In case the two Z axes intersect, place it at that point of intersection. In case they are parallel, place it in some point of the i + 1 joint.
+
+<p align="center">
+  <img src="Images/RestoDelSistema.png" alt="Imagen Open">
+</p>
+
+7. X-axis Each Xi goes in the direction of the normal common to Zi-1 and Zi, in the direction from Zi-1 to Zi. to Zi.
+8. Y axes: Once the Z and X axes are located, the Y axes have their directions determined by the constraint of forming a dextrorotating XYZ. constraint of forming a dextrorotating XYZ.
+9. Robot end system: The n-th XYZ system is placed at the robot end (tool), with its Z axis (tool), with its Z-axis parallel to Zn-1 and X and Y in any valid direction.
+
+<p align="center">
+  <img src="Images/Ejes_y_SistemaExterno.png" alt="Imagen Open">
+</p>
+
+10. Angles θ: Each θi is the angle from Xi-1 to Xi revolving around Zi.
+
+Θ1=-180° & 180°
+Θ2=-180° & 180°
+Θ3=-180° & 180°
+Θ4=-180° & 180°
+
+11. Distances d: Each di is the distance from the XY system Zi-1 to the intersection of the common normals of Zi-1 towards Zi , along Zi-1 . common normals from Zi-1 to Zi , along Zi-1.
+
+d1 = 0.77 mm
+d2 =0.128 mm
+d3 =0mm
+d4 =0mm
+
+12. Distances a: Each ai is the length of such common normal.
+
+a1=0mm
+a2=0.024mm
+a3=0.124mm
+a4=0.126mm
+
+13. Angles ' α: Angle to rotate ' Zi-1 to reach Zi, rotating around Xi.
+
+𝛼1=pi/2
+𝛼2=0
+𝛼3=0
+𝛼4=0
+
+14. Total transformation: The total transformation matrix relating the robot base to its tool is the chaining (multiplication) of all these matrices: T =0 A1 ∗ 1 A2 ∗ .... n-1An
+
+<p align="center">
+  <img src="Images/DH.png" alt="Imagen Open">
+</p>
