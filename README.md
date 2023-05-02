@@ -59,3 +59,10 @@ If you want to contribute to this project, please follow these steps:
 
 This project is licensed under the MIT License. See the LICENSE.md file for more details.
 I hope this helps! Good luck with your project.
+
+# Development
+
+## Procedure to calculate the Denavit-Hartenberg parameters
+
+In order to obtain the kinematic analysis of the Robot, it is required to obtain the Denavit-Hartenberg parameters, this by means of the fifteen steps.
+In order to obtain the kinematic analysis of the robot, it is required to obtain the Denavit-Hartenberg parameters, this by means of the fifteen steps, nevertheless, the most important thing is to consider which is the position 0 of the robot, in the following image we can see how the OPENMANIPULATOR X is the position 0.
