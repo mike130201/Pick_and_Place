@@ -140,6 +140,9 @@ a4=0.126mm
   <img src="Images/DH.png" alt="Imagen Open">
 </p>
 
+
+## Obtaining and validation of the Forward Kinematics and Inverse Kinematics using Matlab.
+
 Made the DH parameters, it is possible to obtain the direct and inverse kinematics of the robot, this will be done using the Matlab software, in conjunction with Peter Corke's "Robotics Toolbox" plugin, by obtaining and validating both kinematics we can obtain the kinematic analysis of the robot.
 
 In general, the procedure consists of generating the robot in Matlab, giving the specifications of the measurements and types of the joints, as well as the rotation that they have, that is, substituting the values in the DH matrix, which remains in the following way:
