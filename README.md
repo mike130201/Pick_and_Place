@@ -139,3 +139,9 @@ a4=0.126mm
 <p align="center">
   <img src="Images/DH.png" alt="Imagen Open">
 </p>
+
+With the DH parameters calculated, it is possible to obtain the direct and inverse kinematics of the robot, this will be done using the Matlab software, in conjunction with Peter Corke's "Robotics Toolbox" plugin, by obtaining and validating both kinematics we can obtain the kinematic analysis of the robot.
+
+
+
+
