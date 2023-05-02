@@ -1,8 +1,4 @@
 <p align="center">
-  <img src="Images/Open.png" alt="Imagen Open">
-</p>
-
-<p align="center">
   <a href="https://www.youtube.com/watch?v=AY5m8ooS1Zg"><img src="https://img.youtube.com/vi/AY5m8ooS1Zg/0.jpg" alt="Video de pick and place"></a>
 </p>
 
@@ -66,3 +62,15 @@ I hope this helps! Good luck with your project.
 
 In order to obtain the kinematic analysis of the Robot, it is required to obtain the Denavit-Hartenberg parameters, this by means of the fifteen steps.
 In order to obtain the kinematic analysis of the robot, it is required to obtain the Denavit-Hartenberg parameters, this by means of the fifteen steps, nevertheless, the most important thing is to consider which is the position 0 of the robot, in the following image we can see how the OPENMANIPULATOR X is the position 0.
+
+<p align="center">
+  <img src="Images/Open.png" alt="Imagen Open">
+</p>
+
+As this is the expected configuration, we started to elaborate each of the steps to obtain the parameters.
+parameters.
+
+1. Number the links: "0" will be called the "ground", or fixed base where the robot is anchored. "1" the first
+first mobile link, etc. 0-1-2-3 Links.
+
+2.Number the joints: "1" will be the first degree of freedom, and "n" the last. 1-4 Articulations
