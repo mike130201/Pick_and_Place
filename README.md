@@ -140,8 +140,28 @@ a4=0.126mm
   <img src="Images/DH.png" alt="Imagen Open">
 </p>
 
-With the DH parameters calculated, it is possible to obtain the direct and inverse kinematics of the robot, this will be done using the Matlab software, in conjunction with Peter Corke's "Robotics Toolbox" plugin, by obtaining and validating both kinematics we can obtain the kinematic analysis of the robot.
+Made the DH parameters, it is possible to obtain the direct and inverse kinematics of the robot, this will be done using the Matlab software, in conjunction with Peter Corke's "Robotics Toolbox" plugin, by obtaining and validating both kinematics we can obtain the kinematic analysis of the robot.
 
+In general, the procedure consists of generating the robot in Matlab, giving the specifications of the measurements and types of the joints, as well as the rotation that they have, that is, substituting the values in the DH matrix, which remains in the following way:
 
+(IMAGEN DE DH CON VALORES)
 
+Using the ".teach" command, the graphical interface of the robot is printed, which is as follows:
 
+(IMAGEN DL ROBOT EN MATLAB)
+
+The direct kinematics is obtained by calculating through the analysis of each of the joints, to later obtain the analysis of the entire robot by multiplying the results of all the joints, the procedure for each joint is as follows:
+
+(IMAGE OF THE GENERAL PROC OF THE CD)
+
+Therefore, it is enough to substitute the values ​​in each of the operations, said values ​​are the same as those of the DH table, this applies to all the joints of our robot, with which it only remains to multiply the analyzes of the different joints. To know that the calculation is correct, the values of the matrix obtained are compared with the values ​​of the simulation, as observed below:
+
+(Image of the robot and the CD)
+
+Since the values are the same, the calculation is correct.
+
+To obtain the inverse kinematics, a complex analysis must be carried out for each joint, in which the procedure differs depending on the characteristics of each one, so using the Robotics Toolbox plugin, the ".ikine" command can be used, which performs the calculation in the position that we assign, the result is shown below:
+
+(IMAGEN DE LA CI CON EL ROBOT)
+
+With both kinematics validated, we proceed to use Ross and Gazebo.
