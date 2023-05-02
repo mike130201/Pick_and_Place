@@ -4,18 +4,18 @@
 
 # Pick and Place
 
-This project is a pick and place solution based on an industrial robot to automate the assembly process of parts on a production line.
+This project is a pick and place solution for the OpenManipulatorX.
 
 ## Requirements
 
 To run this project you need the following components:
 
-- Industrial robot
-- Vision sensor
-- Motion controller
-- Robot control software
-- Vision control software
-- Parts to be assembled
+- Ubuntu 20.04.
+- ROS Noetic.
+- Matlab.
+- OpenManipulatorX.
+- Open CR.
+- Gazebo (Optional)
 
 ## Installation
 
