@@ -1,7 +1,7 @@
-<p align="center">
-  <a href="https://www.youtube.com/watch?v=AY5m8ooS1Zg"><img src="https://img.youtube.com/vi/AY5m8ooS1Zg/0.jpg" alt="Video de pick and place"></a>
-</p>
 
+<p align="center">
+  <img src="Images/Open.jpg" alt="Imagen Open"> 
+</p>
 # Pick and Place
 
 This project is a pick and place solution for the OpenManipulatorX.
@@ -40,7 +40,9 @@ Copy code
 5. Execute the piece detection program to have the vision sensor detect the parts to be assembled.
 6. Execute the motion control program to have the robot pick up and assemble the parts.
 7. Repeat the process until all the parts have been assembled.
-
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=AY5m8ooS1Zg"><img src="https://img.youtube.com/vi/AY5m8ooS1Zg/0.jpg" alt="Video de pick and place"></a>
+</p>
 ## Contribution
 
 If you want to contribute to this project, please follow these steps:
