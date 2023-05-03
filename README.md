@@ -41,87 +41,10 @@ To run this project you need the following components:
 
 ### Denavit-Hartenberg parameters.
 
-In order to obtain the kinematic analysis of the Robot, it is required to obtain the Denavit-Hartenberg parameters, this by means of the fifteen steps.
-In order to obtain the kinematic analysis of the robot, it is required to obtain the Denavit-Hartenberg parameters, this by means of the fifteen steps, nevertheless, the most important thing is to consider which is the position 0 of the robot, in the following image we can see how the OPENMANIPULATOR X is the position 0.
+The Denavit-Hartenberg (DH) parameters are a systematic procedure that is used to describe the kinematic structure of an articulated chain made up of joints with a single degree of freedom. Through this procedure, the DH matrix is obtained, the which includes data such as the distance to move in the z axis (d1), the distance to move in the x axis (a1), the rotation to perform in the z axis (theta1) and the rotation in the x axis (alpha1).
 
-<p align="center">
-  <img src="Images/Open.png" alt="Imagen Open">
-</p>
-
-As this is the expected configuration, we started to elaborate each of the steps to obtain the parameters.
-parameters.
-
-1. Number the links: "0" will be called the "ground", or fixed base where the robot is anchored. "1" the first
-first mobile link, etc. 0-1-2-3 Links.
-
-<p align="center">
-  <img src="Images/Paso1.png" alt="Imagen Open">
-</p>
-
-2.Number the joints: "1" will be the first degree of freedom, and "n" the last. 1-4 Articulations
-
-3. Locate the axis of each joint: For pairs of revolution, it will be the axis of rotation. For prismatic, it will be the axis along which the link moves.
-
-<p align="center">
-  <img src="Images/EjeDeCadaArticulacion.png" alt="Imagen Open">
-</p>
-
-4. Z axes: We start placing the XYZ systems. We place the Zi-1 on the axes of the i joints, with i = 1, . . . ., n. That is, Z0 goes on the axis of the 1st joint, Z1 goes on the axis of the 2nd degree of freedom, etc.
-
-<p align="center">
-  <img src="Images/EjesZ.png" alt="Imagen Open">
-</p>
-
-5. Coordinate system 0: The origin point is located at any point along Z0. The orientation of X0 and Y0 can be arbitrary, provided of course that XYZ is a dextrorotating system.
-6. Rest of systems: For the rest of the systems i = 1, . . . ., N - 1, place the origin point at the intersection of Zi with the normal common to Zi and Zi+1. intersection of Zi with the normal common to Zi and Zi+1. In case the two Z axes intersect, place it at that point of intersection. In case they are parallel, place it in some point of the i + 1 joint.
-
-<p align="center">
-  <img src="Images/RestoDelSistema.png" alt="Imagen Open">
-</p>
-
-7. X-axis Each Xi goes in the direction of the normal common to Zi-1 and Zi, in the direction from Zi-1 to Zi. to Zi.
-8. Y axes: Once the Z and X axes are located, the Y axes have their directions determined by the constraint of forming a dextrorotating XYZ. constraint of forming a dextrorotating XYZ.
-9. Robot end system: The n-th XYZ system is placed at the robot end (tool), with its Z axis (tool), with its Z-axis parallel to Zn-1 and X and Y in any valid direction.
-
-<p align="center">
-  <img src="Images/Ejes_y_SistemaExterno.png" alt="Imagen Open">
-</p>
-
-10. Angles θ: Each θi is the angle from Xi-1 to Xi revolving around Zi.
-
-Θ1=-180° & 180°
-Θ2=-180° & 180°
-Θ3=-180° & 180°
-Θ4=-180° & 180°
-
-11. Distances d: Each di is the distance from the XY system Zi-1 to the intersection of the common normals of Zi-1 towards Zi , along Zi-1 . common normals from Zi-1 to Zi , along Zi-1.
-
-d1 = 0.77 mm
-d2 =0.128 mm
-d3 =0mm
-d4 =0mm
-
-12. Distances a: Each ai is the length of such common normal.
-
-a1=0mm
-a2=0.024mm
-a3=0.124mm
-a4=0.126mm
-
-13. Angles ' α: Angle to rotate ' Zi-1 to reach Zi, rotating around Xi.
-
-𝛼1=pi/2
-𝛼2=0
-𝛼3=0
-𝛼4=0
-
-14. Total transformation: The total transformation matrix relating the robot base to its tool is the chaining (multiplication) of all these matrices: T =0 A1 ∗ 1 A2 ∗ .... n-1An
-
-<p align="center">
-  <img src="Images/DH.png" alt="Imagen Open">
-</p>
-
-
+It is important to mention that for the construction and simulation of this robot, the first two articulations are generated first, then it must be observed that q2 has an offset, because it must be taken into account that the distance from the hypotenuse is measured. From the links of articulations 2 and 3, created the offset, it is possible to continue with the third articulation, likewise, from this third articulation the offset of articulation 2 must be subtracted, this because ee is the only offset, with this it is possible to create the fourth update.
+  
 ### Obtaining and validation of the Forward Kinematics and Inverse Kinematics using Matlab.
 
 Made the DH parameters, it is possible to obtain the direct and inverse kinematics of the robot, this will be done using the Matlab software, in conjunction with Peter Corke's "Robotics Toolbox" plugin, by obtaining and validating both kinematics we can obtain the kinematic analysis of the robot.
@@ -129,28 +52,38 @@ Made the DH parameters, it is possible to obtain the direct and inverse kinemati
 In general, the procedure consists of generating the robot in Matlab, giving the specifications of the measurements and types of the joints, as well as the rotation that they have, that is, substituting the values in the DH matrix, which remains in the following way:
 
 <p align="center">
-  <img src="Images/DHvalores.png" alt="Imagen Open">
+  <img src="Images/DHvalores.PNG" alt="Imagen Open">
 </p>
-
-(IMAGEN DE DH CON VALORES)
 
 Using the ".teach" command, the graphical interface of the robot is printed, which is as follows:
 
-(IMAGEN DL ROBOT EN MATLAB)
+
+<p align="center">
+  <img src="Images/robotmatlab.PNG" alt="Imagen Open">
+</p>
+
 
 The direct kinematics is obtained by calculating through the analysis of each of the joints, to later obtain the analysis of the entire robot by multiplying the results of all the joints, the procedure for each joint is as follows:
 
-(IMAGE OF THE GENERAL PROC OF THE CD)
+<p align="center">
+  <img src="Images/proceDC.PNG" alt="Imagen Open">
+</p>
 
 Therefore, it is enough to substitute the values ​​in each of the operations, said values ​​are the same as those of the DH table, this applies to all the joints of our robot, with which it only remains to multiply the analyzes of the different joints. To know that the calculation is correct, the values of the matrix obtained are compared with the values ​​of the simulation, as observed below:
 
-(Image of the robot and the CD)
+<p align="center">
+  <img src="Images/CD.PNG" alt="Imagen Open">
+</p>
+
 
 Since the values are the same, the calculation is correct.
 
 To obtain the inverse kinematics, a complex analysis must be carried out for each joint, in which the procedure differs depending on the characteristics of each one, so using the Robotics Toolbox plugin, the ".ikine" command can be used, which performs the calculation in the position that we assign, the result is shown below:
 
-(IMAGEN DE LA CI CON EL ROBOT)
+<p align="center">
+  <img src="Images/CI.PNG" alt="Imagen Open">
+</p>
+
 
 With both kinematics validated, we proceed to use Ros and Gazebo.
 
