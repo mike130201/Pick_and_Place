@@ -285,12 +285,19 @@ if the simulation is correct now you can do it with the OpenManipulatorX
 
 ## Important Links
 This proyect is based on the Keyboard cpp program, however new functions are called and created, if you want to see the main differences with the original project this link can be check:
+
 https://github.com/ROBOTIS-GIT/open_manipulator
+
 For the OpenManipulator e-Manual you can Check this link:
+
 https://emanual.robotis.com/docs/en/platform/openmanipulator_x/overview/
+
 For the Open CR:
+
 https://emanual.robotis.com/docs/en/parts/controller/opencr10/
-Also, other source where more information can be found is the the following book
+
+Also, other source where more information can be found is the the following book:
+
 http://wiki.ros.org/Books/ROS_Robot_Programming_English
 ## Contact 
 Authors:
