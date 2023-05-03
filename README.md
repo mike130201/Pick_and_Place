@@ -1,10 +1,13 @@
-
-<p align="center">
-  <img src="Images/Open.jpg" alt="Imagen Open"> 
-</p>
 # Pick and Place
+<p align="center">
+  <img src="Images/Open.jpg" alt="Imagen Open" style="width:30%;"> 
+</p>
 
-This project is a pick and place solution for the OpenManipulatorX.
+
+<p align="center">This is an implementation of a pick and place solution for the OpenManipulatorX.
+
+## Project Overview
+The Open MANIPULATOR-X robot based on ROS is one of the most commonly used robotic arms for training in the industry. In this project, a Pick and Place operation that will be performed using this robot arm. The goal is to create a program that instructs the robotic arm to pick up a series of objects and place them at a specific point in the workspace. Prior to this, a thorough analysis of the arm will be conducted to obtain its direct and inverse kinematics, and will be done using Matlab software in collaboration with the Robotics Toolbox plug-in developed by Peter Corke. For the Open MANIPULATOR-X will be used the teleoperation funtions to create a new project that execute the Pick and Place.
 
 ## Requirements
 
@@ -17,48 +20,7 @@ To run this project you need the following components:
 - Open CR.
 - Gazebo (Optional)
 
-## Installation
-
-1. Clone the repository on your computer:
-git clone https://github.com/your_username/pick-and-place.git
-
-markdown
-Copy code
-
-2. Install the project dependencies:
-pip install -r requirements.txt
-
-markdown
-Copy code
-
-## Usage
-
-1. Connect all the project components and make sure they are working properly.
-2. Start the robot control software and load the motion control program `pick_and_place.py`.
-3. Start the vision control software and load the piece detection program `piece_detection.py`.
-4. Execute the motion control program to position the robot in the appropriate location.
-5. Execute the piece detection program to have the vision sensor detect the parts to be assembled.
-6. Execute the motion control program to have the robot pick up and assemble the parts.
-7. Repeat the process until all the parts have been assembled.
-<p align="center">
-  <a href="https://www.youtube.com/watch?v=AY5m8ooS1Zg"><img src="https://img.youtube.com/vi/AY5m8ooS1Zg/0.jpg" alt="Video de pick and place"></a>
-</p>
-## Contribution
-
-If you want to contribute to this project, please follow these steps:
-
-1. Fork this repository.
-2. Create a new branch for your contribution.
-3. Make your changes and commit with a descriptive message.
-4. Push your changes to your repository.
-5. Create a pull request to this repository and describe your changes.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE.md file for more details.
-I hope this helps! Good luck with your project.
-
-# Development
+# Robot kinematics
 
 ## Procedure to calculate the Denavit-Hartenberg parameters
 
@@ -170,3 +132,44 @@ To obtain the inverse kinematics, a complex analysis must be carried out for eac
 (IMAGEN DE LA CI CON EL ROBOT)
 
 With both kinematics validated, we proceed to use Ross and Gazebo.
+## Installation
+
+1. Clone the repository on your computer:
+git clone https://github.com/your_username/pick-and-place.git
+
+markdown
+Copy code
+
+2. Install the project dependencies:
+pip install -r requirements.txt
+
+markdown
+Copy code
+
+## Usage
+
+1. Connect all the project components and make sure they are working properly.
+2. Start the robot control software and load the motion control program `pick_and_place.py`.
+3. Start the vision control software and load the piece detection program `piece_detection.py`.
+4. Execute the motion control program to position the robot in the appropriate location.
+5. Execute the piece detection program to have the vision sensor detect the parts to be assembled.
+6. Execute the motion control program to have the robot pick up and assemble the parts.
+7. Repeat the process until all the parts have been assembled.
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=AY5m8ooS1Zg"><img src="https://img.youtube.com/vi/AY5m8ooS1Zg/0.jpg" alt="Video de pick and place"></a>
+</p>
+## Contribution
+
+If you want to contribute to this project, please follow these steps:
+
+1. Fork this repository.
+2. Create a new branch for your contribution.
+3. Make your changes and commit with a descriptive message.
+4. Push your changes to your repository.
+5. Create a pull request to this repository and describe your changes.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE.md file for more details.
+I hope this helps! Good luck with your project.
+
