@@ -128,6 +128,10 @@ Made the DH parameters, it is possible to obtain the direct and inverse kinemati
 
 In general, the procedure consists of generating the robot in Matlab, giving the specifications of the measurements and types of the joints, as well as the rotation that they have, that is, substituting the values in the DH matrix, which remains in the following way:
 
+<p align="center">
+  <img src="Images/DHvalores.png" alt="Imagen Open">
+</p>
+
 (IMAGEN DE DH CON VALORES)
 
 Using the ".teach" command, the graphical interface of the robot is printed, which is as follows:
