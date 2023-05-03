@@ -1,7 +1,7 @@
 <a name="top"></a>
 # Pick and Place
 <p align="center">
-  <img src="Images/Open.jpg" alt="Imagen Open" style="width:30%;"> 
+  <img src="Images/Open.jpg" alt="Image Open" style="width:30%;"> 
 </p>
 
 
@@ -187,8 +187,13 @@ $ roslaunch open_manipulator_controller open_manipulator_controller.launch usb_p
 ```
 To run the project you need to write the following command
 ```ROS
-$ roslaunch open_manipulator_teleop open_manipulator_teleop_keyboard.launch
+$ roslaunch open_manipulator_teleop open_manipulator_teleop_Pick_and_Place.launch
 ```
+<p align="center">
+  <img src="Images/PickandPlace.png" alt="Pick and Place program" style="width:30%;"> 
+</p>
+
+
 Finally the depending of the choice the robot wil start moving, in the video is shown the Palletizing and the Depalletizing:
 
 
@@ -207,6 +212,10 @@ If you want to contribute to this project, please follow these steps:
 ```ROS
 roslaunch open_manipulator_control_gui open_manipulator_control_gui.launch
 ```
+<p align="center">
+  <img src="Images/GUI.png" alt="GUI" style="width:30%;"> 
+</p>
+
 4. Verify the positions and save it in the new cpp code .
 5. Is recomended to simulate first in Gazebo to avoid problems with the real Open.
 
@@ -222,6 +231,11 @@ Launch your program
 ```ROS
 $ roslaunch open_manipulator_teleop open_manipulator_teleop_Pick_and_Place.launch
 ```
+<p align="center">
+  <img src="Images/Gazebo.png" alt="Gazebon" style="width:30%;"> 
+</p>
+
+
 if the simulation is correct now you can do it with the OpenManipulatorX
 
 ## Important Links
@@ -243,6 +257,7 @@ http://wiki.ros.org/Books/ROS_Robot_Programming_English
 ## Contact 
 Authors:
 José Miguel Zúñiga Juárez - jose.zunigajz@udlap.mx
+
 Diego de Jesús Gutiérrez Reyes - diego.gutierrezrs@udlap.mx
 
 
