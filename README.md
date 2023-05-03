@@ -181,18 +181,47 @@ $ git clone https://github.com/ROBOTIS-GIT/open_manipulator_dependencies.git
 $ cd ~/catkin_ws && catkin_make
 ```
 Once all the OpenMANIPULATOR-X packages are installed and ROS the hardware provided by the lab for the manipulation of the Robot is the Open CR 
-1. Clone the repository on your computer:
-git clone https://github.com/your_username/pick-and-place.git
+<p align="center">
+  <img src="Images/opencr.png" alt="Open CR" style="width:20%;"> 
+</p>
+In order to connect the computer to the Open Manipulator X is important to download Arduino, the version downloaded by the date of this project is the Arduino IDE 1.8.19 and the version is for Linux.
 
-markdown
-Copy code
 
-2. Install the project dependencies:
-pip install -r requirements.txt
+https://www.arduino.cc/en/software
 
-markdown
-Copy code
 
+Once Arduino is downloaded is time to configure the Open CR to the port of the computer, the Open has a guide where in case of the Open CR is not flashed the new user can configured as well
+
+https://emanual.robotis.com/docs/en/parts/controller/opencr10/#arduino-ide
+
+First the ports are configured:
+
+USB Port Settings
+```ROS
+$ wget https://raw.githubusercontent.com/ROBOTIS-GIT/OpenCR/master/99-opencr-cdc.rules
+$ sudo cp ./99-opencr-cdc.rules /etc/udev/rules.d/
+$ sudo udevadm control --reload-rules
+$ sudo udevadm trigger
+```
+Compiler Settings
+```ROS
+$ sudo apt-get install libncurses5-dev:i386
+```
+Now once Arduino is downloaded extract the file and install it.
+
+```ROS
+$ cd ~/downloads/arduino-1.8.19
+$ ./install.sh
+```
+Set the file path of installed Arduino IDE as an absolute path named PATH in the bashrc file.
+```ROS
+$ gedit ~/.bashrc
+$ export PATH=$PATH:$HOME/tools/arduino-1.8.19
+$ source ~/.bashrc
+```
+Porting to Arduino IDE(Linux)
+Install the OpenCR package via Boards Manager
+Click Tools → Board → Boards Manager.
 ### Simulation
 
 1. Connect all the project components and make sure they are working properly.
