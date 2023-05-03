@@ -180,6 +180,8 @@ $ git clone -b noetic-devel https://github.com/ROBOTIS-GIT/open_manipulator_simu
 $ git clone https://github.com/ROBOTIS-GIT/open_manipulator_dependencies.git
 $ cd ~/catkin_ws && catkin_make
 ```
+This project is an addition for the OpenManipulator_teleop, a cpp programan was created in the src and all the dependencies as the lunch and the header where created, also the Cmake file was modified to add the pick and place funtion, so to get this project once all the OpenMANIPULATOR-X packages are installed, a new code can be created with the name and location of the files that are added in this repository, it can be added by VS code or directly in the text editor but save it with the corresponding name
+
 Once all the OpenMANIPULATOR-X packages are installed and ROS the hardware provided by the lab for the manipulation of the Robot is the Open CR 
 <p align="center">
   <img src="Images/opencr.png" alt="Open CR" style="width:20%;"> 
@@ -222,29 +224,62 @@ $ source ~/.bashrc
 Porting to Arduino IDE(Linux)
 Install the OpenCR package via Boards Manager
 Click Tools → Board → Boards Manager.
-### Simulation
+<p align="center">
+  <img src="Images/Openboard.png" alt="Board configuration" style="width:30%;"> 
+</p>
+<p align="center">
+  <img src="Images/Openboard2.png" alt="Port Configuration " style="width:30%;"> 
+</p>
+However, if is not clear enough there is the link for the Open CR in the links given above
 
-1. Connect all the project components and make sure they are working properly.
-2. Start the robot control software and load the motion control program `pick_and_place.py`.
-3. Start the vision control software and load the piece detection program `piece_detection.py`.
-4. Execute the motion control program to position the robot in the appropriate location.
-5. Execute the piece detection program to have the vision sensor detect the parts to be assembled.
-6. Execute the motion control program to have the robot pick up and assemble the parts.
-7. Repeat the process until all the parts have been assembled.
+[Back to Top](#top)
+### Simulation
+Once all the previous steps are done the implementation can be done.
+
+For initialized the Open is command is necessary to give torque to the motors
+```ROS
+$ roslaunch open_manipulator_controller open_manipulator_controller.launch usb_port:=/dev/ttyACM0 baud_rate:=1000000
+```
+To run the project you need to write the following command
+```ROS
+$ roslaunch open_manipulator_teleop open_manipulator_teleop_keyboard.launch
+```
+Finally the depending of the choice the robot wil start moving, in the video is shown the Palletizing and the Depalletizing:
+
+
 <p align="center">
   <a href="https://www.youtube.com/watch?v=AY5m8ooS1Zg"><img src="https://img.youtube.com/vi/AY5m8ooS1Zg/0.jpg" alt="Video de pick and place"></a>
 </p>
-## Contribution
+
+
+## Add New Things
 
 If you want to contribute to this project, please follow these steps:
 
-1. Fork this repository.
-2. Create a new branch for your contribution.
-3. Make your changes and commit with a descriptive message.
-4. Push your changes to your repository.
-5. Create a pull request to this repository and describe your changes.
+1. set the positions of the things that are going to be pick and place.
+2. With the matlab codes calculate the inverse kinematics to obtain the positions of the ariticulations.
+3. That values can be simulated with the GUI Program. (Do not forget to connect to the Open before)
+```ROS
+roslaunch open_manipulator_control_gui open_manipulator_control_gui.launch
+```
+4. Verify the positions and save it in the new cpp code .
+5. Is recomended to simulate first in Gazebo to avoid problems with the real Open.
 
-## License
+Launch Gazebo:
+```ROS
+$ roslaunch open_manipulator_gazebo open_manipulator_gazebo.launch
+```
+Connect the Open to Gazebo
+```ROS
+$ roslaunch open_manipulator_controller open_manipulator_controller.launch use_platform:=false
+```
+Launch your program
+```ROS
+$ roslaunch open_manipulator_teleop open_manipulator_teleop_Pick_and_Place.launch
+```
+if the simulation is correct now you can do it with the OpenManipulatorX
+
+## References
 
 This project is licensed under the MIT License. See the LICENSE.md file for more details.
 I hope this helps! Good luck with your project.
