@@ -9,6 +9,9 @@
 
 ## Project Overview
 The Open MANIPULATOR-X robot based on ROS is one of the most commonly used robotic arms for training in the industry. In this project, a Pick and Place operation that will be performed using this robot arm. The goal is to create a program that instructs the robotic arm to pick up a series of objects and place them at a specific point in the workspace. Prior to this, a thorough analysis of the arm will be conducted to obtain its direct and inverse kinematics, and will be done using Matlab software in collaboration with the Robotics Toolbox plug-in developed by Peter Corke. For the Open MANIPULATOR-X will be used the teleoperation funtions to create a new project that execute the Pick and Place.
+  
+  
+  
 ## Content List
 - [Pick and Place](#pick-and-place)  
 - [Project Overview](#project-overview)  
@@ -16,11 +19,12 @@ The Open MANIPULATOR-X robot based on ROS is one of the most commonly used robot
 - [Robot kinematics](#robot-kinematics)
   - [Denavit-Hartenberg parameters](#denavit-hartenberg-parameters)
   - [Obtaining and Validation of the Forward Kinematics and Inverse Kinematics using Matlab](#obtaining-and-validation-of-the-forward-kinematics-and-inverse-kinematics-using-matlab)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
+- [Initial Setup](#initial-setup)
   - [Installation](#installation)
-- [Usage and Implementation Video](#usage-and-implementation-video)
-- [Modifications to the Original Project](#modifications-to-the-original-project)
+  - [Open CR](#open-cr)
+  - [Simulation](#simulation)
+- [Add New Things](#add-new-things)
+- [References](#references)
 - [Contact](#contact)
 ## Requirements
 
@@ -181,7 +185,7 @@ $ git clone https://github.com/ROBOTIS-GIT/open_manipulator_dependencies.git
 $ cd ~/catkin_ws && catkin_make
 ```
 This project is an addition for the OpenManipulator_teleop, a cpp programan was created in the src and all the dependencies as the lunch and the header where created, also the Cmake file was modified to add the pick and place funtion, so to get this project once all the OpenMANIPULATOR-X packages are installed, a new code can be created with the name and location of the files that are added in this repository, it can be added by VS code or directly in the text editor but save it with the corresponding name
-
+### Open CR
 Once all the OpenMANIPULATOR-X packages are installed and ROS the hardware provided by the lab for the manipulation of the Robot is the Open CR 
 <p align="center">
   <img src="Images/opencr.png" alt="Open CR" style="width:20%;"> 
@@ -281,6 +285,9 @@ if the simulation is correct now you can do it with the OpenManipulatorX
 
 ## References
 
-This project is licensed under the MIT License. See the LICENSE.md file for more details.
-I hope this helps! Good luck with your project.
+## Contact 
+Authors:
+José Miguel Zúñiga Juárez - jose.zunigajz@udlap.mx
 
+
+Project Link: https://github.com/mike130201/Pick_and_Place
