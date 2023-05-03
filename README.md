@@ -24,7 +24,7 @@ The Open MANIPULATOR-X robot based on ROS is one of the most commonly used robot
   - [Open CR](#open-cr)
   - [Simulation](#simulation)
 - [Add New Things](#add-new-things)
-- [References](#references)
+- [Important Links](#important-links)
 - [Contact](#contact)
 ## Requirements
 
@@ -283,8 +283,15 @@ $ roslaunch open_manipulator_teleop open_manipulator_teleop_Pick_and_Place.launc
 ```
 if the simulation is correct now you can do it with the OpenManipulatorX
 
-## References
-
+## Important Links
+This proyect is based on the Keyboard cpp program, however new functions are called and created, if you want to see the main differences with the original project this link can be check:
+https://github.com/ROBOTIS-GIT/open_manipulator
+For the OpenManipulator e-Manual you can Check this link:
+https://emanual.robotis.com/docs/en/platform/openmanipulator_x/overview/
+For the Open CR:
+https://emanual.robotis.com/docs/en/parts/controller/opencr10/
+Also, other source where more information can be found is the the following book
+http://wiki.ros.org/Books/ROS_Robot_Programming_English
 ## Contact 
 Authors:
 José Miguel Zúñiga Juárez - jose.zunigajz@udlap.mx
