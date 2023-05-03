@@ -254,13 +254,15 @@ https://emanual.robotis.com/docs/en/parts/controller/opencr10/
 Also, other source where more information can be found is the the following book:
 
 http://wiki.ros.org/Books/ROS_Robot_Programming_English
+
+
+[Back to Top](#top)
+
 ## Contact 
 Authors:
 José Miguel Zúñiga Juárez - jose.zunigajz@udlap.mx
 
 Diego de Jesús Gutiérrez Reyes - diego.gutierrezrs@udlap.mx
-
-André Federico López Hernández - andre.lopezhz@udlap.mx
 
 
 Project Link: https://github.com/mike130201/Pick_and_Place
