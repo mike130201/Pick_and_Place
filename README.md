@@ -260,6 +260,8 @@ José Miguel Zúñiga Juárez - jose.zunigajz@udlap.mx
 
 Diego de Jesús Gutiérrez Reyes - diego.gutierrezrs@udlap.mx
 
+André Federico López Hernández - andre.lopezhz@udlap.mx
+
 
 Project Link: https://github.com/mike130201/Pick_and_Place
 
