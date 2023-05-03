@@ -1,3 +1,4 @@
+<a name="top"></a>
 # Pick and Place
 <p align="center">
   <img src="Images/Open.jpg" alt="Imagen Open" style="width:30%;"> 
@@ -8,7 +9,19 @@
 
 ## Project Overview
 The Open MANIPULATOR-X robot based on ROS is one of the most commonly used robotic arms for training in the industry. In this project, a Pick and Place operation that will be performed using this robot arm. The goal is to create a program that instructs the robotic arm to pick up a series of objects and place them at a specific point in the workspace. Prior to this, a thorough analysis of the arm will be conducted to obtain its direct and inverse kinematics, and will be done using Matlab software in collaboration with the Robotics Toolbox plug-in developed by Peter Corke. For the Open MANIPULATOR-X will be used the teleoperation funtions to create a new project that execute the Pick and Place.
-
+## Content List
+- [Pick and Place](#pick-and-place)  
+- [Project Overview](#project-overview)  
+- [Requirements](#requirements)
+- [Robot kinematics](#robot-kinematics)
+  - [Denavit-Hartenberg parameters](#denavit-hartenberg-parameters)
+  - [Obtaining and Validation of the Forward Kinematics and Inverse Kinematics using Matlab](#obtaining-and-validation-of-the-forward-kinematics-and-inverse-kinematics-using-matlab)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage and Implementation Video](#usage-and-implementation-video)
+- [Modifications to the Original Project](#modifications-to-the-original-project)
+- [Contact](#contact)
 ## Requirements
 
 To run this project you need the following components:
@@ -22,7 +35,7 @@ To run this project you need the following components:
 
 # Robot kinematics
 
-## Procedure to calculate the Denavit-Hartenberg parameters
+### Denavit-Hartenberg parameters.
 
 In order to obtain the kinematic analysis of the Robot, it is required to obtain the Denavit-Hartenberg parameters, this by means of the fifteen steps.
 In order to obtain the kinematic analysis of the robot, it is required to obtain the Denavit-Hartenberg parameters, this by means of the fifteen steps, nevertheless, the most important thing is to consider which is the position 0 of the robot, in the following image we can see how the OPENMANIPULATOR X is the position 0.
@@ -105,7 +118,7 @@ a4=0.126mm
 </p>
 
 
-## Obtaining and validation of the Forward Kinematics and Inverse Kinematics using Matlab.
+### Obtaining and validation of the Forward Kinematics and Inverse Kinematics using Matlab.
 
 Made the DH parameters, it is possible to obtain the direct and inverse kinematics of the robot, this will be done using the Matlab software, in conjunction with Peter Corke's "Robotics Toolbox" plugin, by obtaining and validating both kinematics we can obtain the kinematic analysis of the robot.
 
@@ -131,9 +144,43 @@ To obtain the inverse kinematics, a complex analysis must be carried out for eac
 
 (IMAGEN DE LA CI CON EL ROBOT)
 
-With both kinematics validated, we proceed to use Ross and Gazebo.
-## Installation
+With both kinematics validated, we proceed to use Ros and Gazebo.
 
+
+[Back to Top](#top)
+## Initial Setup
+
+### Installation
+Is important to say that is recomended to install Ubuntu 20.04 in the computer not in a Virtual Box.
+The OpenManipulator is configurated to work in ROS Noetic in the mentioned Ubuntu version, once the Ubuntu is installed is recomender to install ROS from the Wiki:
+http://wiki.ros.org/noetic/Installation/Ubuntu
+
+
+However the installation also can be donde with this comand that is the fast installation:
+```ROS
+$ sudo apt update
+$ wget https://raw.githubusercontent.com/ROBOTIS-GIT/robotis_tools/master/install_ros_noetic.sh
+$ chmod 755 ./install_ros_noetic.sh
+$ bash ./install_ros_noetic.sh
+```
+
+Install dependent pacakges
+```ROS
+$ source ~/.bashrc
+$ sudo apt-get install ros-noetic-ros-controllers ros-noetic-gazebo* ros-noetic-moveit* ros-noetic-industrial-core
+$ sudo apt install ros-noetic-dynamixel-sdk ros-noetic-dynamixel-workbench*
+$ sudo apt install ros-noetic-robotis-manipulator
+```
+Download and build OpenMANIPULATOR-X packages
+```ROS
+$ cd ~/catkin_ws/src/
+$ git clone -b noetic-devel https://github.com/ROBOTIS-GIT/open_manipulator.git
+$ git clone -b noetic-devel https://github.com/ROBOTIS-GIT/open_manipulator_msgs.git
+$ git clone -b noetic-devel https://github.com/ROBOTIS-GIT/open_manipulator_simulations.git
+$ git clone https://github.com/ROBOTIS-GIT/open_manipulator_dependencies.git
+$ cd ~/catkin_ws && catkin_make
+```
+Once all the OpenMANIPULATOR-X packages are installed and ROS the hardware provided by the lab for the manipulation of the Robot is the Open CR 
 1. Clone the repository on your computer:
 git clone https://github.com/your_username/pick-and-place.git
 
@@ -146,7 +193,7 @@ pip install -r requirements.txt
 markdown
 Copy code
 
-## Usage
+### Simulation
 
 1. Connect all the project components and make sure they are working properly.
 2. Start the robot control software and load the motion control program `pick_and_place.py`.
