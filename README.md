@@ -45,6 +45,10 @@ The Denavit-Hartenberg (DH) parameters are a systematic procedure that is used t
 
 It is important to mention that for the construction and simulation of this robot, the first two articulations are generated first, then it must be observed that q2 has an offset, because it must be taken into account that the distance from the hypotenuse is measured. From the links of articulations 2 and 3, created the offset, it is possible to continue with the third articulation, likewise, from this third articulation the offset of articulation 2 must be subtracted, this because ee is the only offset, with this it is possible to create the fourth update.
   
+  <p align="center">
+  <img src="Images/procesomatriz.PNG" alt="Imagen Open">
+  </p>
+  
 ### Obtaining and validation of the Forward Kinematics and Inverse Kinematics using Matlab.
 
 Made the DH parameters, it is possible to obtain the direct and inverse kinematics of the robot, this will be done using the Matlab software, in conjunction with Peter Corke's "Robotics Toolbox" plugin, by obtaining and validating both kinematics we can obtain the kinematic analysis of the robot.
