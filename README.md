@@ -260,11 +260,11 @@ http://wiki.ros.org/Books/ROS_Robot_Programming_English
 
 ## Contact 
 Authors:
-José Miguel Zúñiga Juárez - jose.zunigajz@udlap.mx
+José Miguel Zúñiga Juárez - jose.zunigajz@udlap.mx - Github: mike130201
 
-Diego de Jesús Gutiérrez Reyes - diego.gutierrezrs@udlap.mx
+Diego de Jesús Gutiérrez Reyes - diego.gutierrezrs@udlap.mx - Github: DiegoJGutierrezReyes
 
-André Federico López Hernández - andre.lopezhz@udlap.mx
+André Federico López Hernández - andre.lopezhz@udlap.mx - Github: andre261220
 
 Project Link: https://github.com/mike130201/Pick_and_Place
 
