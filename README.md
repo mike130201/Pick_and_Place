@@ -190,7 +190,7 @@ To run the project you need to write the following command
 $ roslaunch open_manipulator_teleop open_manipulator_teleop_Pick_and_Place.launch
 ```
 <p align="center">
-  <img src="Images/PickandPlace.png" alt="Pick and Place program" style="width:30%;"> 
+  <img src="Images/PickandPlace.png" alt="Pick and Place program" style="width:55%;"> 
 </p>
 
 
@@ -213,7 +213,7 @@ If you want to contribute to this project, please follow these steps:
 roslaunch open_manipulator_control_gui open_manipulator_control_gui.launch
 ```
 <p align="center">
-  <img src="Images/GUI.png" alt="GUI" style="width:30%;"> 
+  <img src="Images/GUI.png" alt="GUI" style="width:45%;"> 
 </p>
 
 4. Verify the positions and save it in the new cpp code .
@@ -232,7 +232,7 @@ Launch your program
 $ roslaunch open_manipulator_teleop open_manipulator_teleop_Pick_and_Place.launch
 ```
 <p align="center">
-  <img src="Images/Gazebo.png" alt="Gazebon" style="width:30%;"> 
+  <img src="Images/Gazebo.png" alt="Gazebon" style="width:45%;"> 
 </p>
 
 
