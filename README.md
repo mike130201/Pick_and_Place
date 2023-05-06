@@ -98,7 +98,7 @@ With both kinematics validated, we proceed to use Ros and Gazebo.
 
 ### Installation
 Is important to say that is recomended to install Ubuntu 20.04 in the computer not in a Virtual Box.
-The OpenManipulator is configurated to work in ROS Noetic in the mentioned Ubuntu version, once the Ubuntu is installed is recomender to install ROS from the Wiki:
+The OpenManipulator is configurated to work in ROS Noetic in the mentioned Ubuntu version, once the Ubuntu is installed is recomended to install ROS from the Wiki:
 http://wiki.ros.org/noetic/Installation/Ubuntu
 
 
@@ -126,19 +126,19 @@ $ git clone -b noetic-devel https://github.com/ROBOTIS-GIT/open_manipulator_simu
 $ git clone https://github.com/ROBOTIS-GIT/open_manipulator_dependencies.git
 $ cd ~/catkin_ws && catkin_make
 ```
-This project is an addition for the OpenManipulator_teleop, a cpp programan was created in the src and all the dependencies as the lunch and the header where created, also the Cmake file was modified to add the pick and place funtion, so to get this project once all the OpenMANIPULATOR-X packages are installed, a new code can be created with the name and location of the files that are added in this repository, it can be added by VS code or directly in the text editor but save it with the corresponding name
+This project is an addition for the OpenManipulator_teleop. A CPP program was created in the 'src' directory, and all the dependencies such as the launch files and headers were created. Additionally, the CMake file was modified to add the pick and place function. To use this project, ensure that all the OpenMANIPULATOR-X packages are installed. Then, create a new code file with the desired name and location, either through VS Code or directly in a text editor. Remember to save the file with the corresponding name. You can check deeper this part in Changes in the original project
 ### Open CR
-Once all the OpenMANIPULATOR-X packages are installed and ROS the hardware provided by the lab for the manipulation of the Robot is the Open CR 
+Once all the OpenMANIPULATOR-X packages are installed and ROS (Robot Operating System), the hardware provided by the lab for the manipulation of the robot is the OpenCR
 <p align="center">
   <img src="Images/opencr.png" alt="Open CR" style="width:20%;"> 
 </p>
-In order to connect the computer to the Open Manipulator X is important to download Arduino, the version downloaded by the date of this project is the Arduino IDE 1.8.19 and the version is for Linux.
+In order to connect the computer to the Open Manipulator X, it is important to download Arduino. As of the date of this project, the downloaded version is Arduino IDE 1.8.19, specifically for Linux.
 
 
 https://www.arduino.cc/en/software
 
 
-Once Arduino is downloaded is time to configure the Open CR to the port of the computer, the Open has a guide where in case of the Open CR is not flashed the new user can configured as well
+Once Arduino is downloaded, is time to configured the Open CR to the port of the computer, the Open has a guide where in case of the Open CR is not flashed the new user can configured as well in the following link:
 
 https://emanual.robotis.com/docs/en/parts/controller/opencr10/#arduino-ide
 
@@ -219,9 +219,9 @@ You can add this files in VS code or in a text note just save the files with the
 
 If you want to contribute to this project, please follow these steps:
 
-1. set the positions of the things that are going to be pick and place.
+1. Set the positions of the things that where the Open will do the pick and place.
 2. With the matlab codes calculate the inverse kinematics to obtain the positions of the ariticulations.
-3. That values can be simulated with the GUI Program. (Do not forget to connect to the Open before)
+3. That values can be simulated with the GUI Program. (Do not forget to connect to the Open before, just instead of lunch the new program lunch the following one)
 ```ROS
 roslaunch open_manipulator_control_gui open_manipulator_control_gui.launch
 ```
