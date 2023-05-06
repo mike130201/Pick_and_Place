@@ -23,7 +23,7 @@ The Open MANIPULATOR-X robot based on ROS is one of the most commonly used robot
   - [Installation](#installation)
   - [Open CR](#open-cr)
   - [Simulation](#simulation)
-  - [Addition for original project](#addition-for-original-project)
+  - [Changes in the original project](#changes-in-the-original-project)
 - [Add New Things](#add-new-things)
 - [Important Links](#important-links)
 - [Contact](#contact)
@@ -202,8 +202,19 @@ Finally, depending of the choice the robot wil start moving, in the video is sho
   <a href="https://www.youtube.com/watch?v=AY5m8ooS1Zg"><img src="https://img.youtube.com/vi/AY5m8ooS1Zg/0.jpg" alt="Video de pick and place"></a>
 </p>
 
-## Addition for original project
-All the codes were created in c++ taking as a base the Original file of OpenManipulator_Teleop, if you want to use this example of pick and place you can add all the files to the original documents, as the Header, the Lunch and the C++ file where is located the program, also is important to modify the Cmake
+## Changes in the original project
+All the codes were created in c++ taking as a base the Original file of OpenManipulator_Teleop, if you want to use this example of pick and place you can add all the files to the original documents in the part of OpenManipulator_Teleop, as the Header, the Lunch and the C++ in the src file where is located the program, also is important to modify the CMakeLists.txt, the exact part that needs to be added is the following part:
+
+```ROS
+add_executable(open_manipulator_teleop_Pick_and_Place src/open_manipulator_teleop_Pick_and_Place.cpp)
+add_dependencies(open_manipulator_teleop_Pick_and_Place ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(open_manipulator_teleop_Pick_and_Place ${catkin_LIBRARIES})
+```
+Where this code is responsible for compiling and building an executable named "open_manipulator_teleop_Pick_and_Place", specifying its dependencies, and linking necessary libraries to it in a ROS project.
+
+You can add this files in VS code or in a text note just save the files with the same name and termination, and for the Cmake just modify it.
+
+
 ## Add New Things
 
 If you want to contribute to this project, please follow these steps:
