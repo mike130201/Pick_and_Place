@@ -273,6 +273,7 @@ http://wiki.ros.org/Books/ROS_Robot_Programming_English
 
 ## Contact 
 Authors:
+
 José Miguel Zúñiga Juárez - jose.zunigajz@udlap.mx - Github: mike130201
 
 Diego de Jesús Gutiérrez Reyes - diego.gutierrezrs@udlap.mx - Github: DiegoJGutierrezReyes
