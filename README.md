@@ -23,6 +23,7 @@ The Open MANIPULATOR-X robot based on ROS is one of the most commonly used robot
   - [Installation](#installation)
   - [Open CR](#open-cr)
   - [Simulation](#simulation)
+  - [Addition for original project](#addition-for-original-project)
 - [Add New Things](#add-new-things)
 - [Important Links](#important-links)
 - [Contact](#contact)
@@ -181,7 +182,7 @@ However, if is not clear enough there is the link for the Open CR in the links g
 ### Simulation
 Once all the previous steps are done the implementation can be done.
 
-For initialized the Open is command is necessary to give torque to the motors
+For initialized the Open is command is necessary to give torque to the motors by the following comand:
 ```ROS
 $ roslaunch open_manipulator_controller open_manipulator_controller.launch usb_port:=/dev/ttyACM0 baud_rate:=1000000
 ```
@@ -192,16 +193,17 @@ $ roslaunch open_manipulator_teleop open_manipulator_teleop_Pick_and_Place.launc
 <p align="center">
   <img src="Images/PickandPlace.png" alt="Pick and Place program" style="width:55%;"> 
 </p>
+Once the user select a option, the interface will be showing each step that the robot needs to complete the task selected.
 
-
-Finally the depending of the choice the robot wil start moving, in the video is shown the Palletizing and the Depalletizing:
+Finally, depending of the choice the robot wil start moving, in the video is shown the Palletizing and the Depalletizing:
 
 
 <p align="center">
   <a href="https://www.youtube.com/watch?v=AY5m8ooS1Zg"><img src="https://img.youtube.com/vi/AY5m8ooS1Zg/0.jpg" alt="Video de pick and place"></a>
 </p>
 
-
+## Addition for original project
+All the codes were created in c++ taking as a base the Original file of OpenManipulator_Teleop, if you want to use this example of pick and place you can add all the files to the original documents, as the Header, the Lunch and the C++ file where is located the program, also is important to modify the Cmake
 ## Add New Things
 
 If you want to contribute to this project, please follow these steps:
